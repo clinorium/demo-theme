@@ -1,35 +1,57 @@
 import React from 'react'
 import { defineSection } from '@norium/theme-kit'
-import { Stack } from '@norium/ui'
-import { useCurrentClinic } from '@norium/common/hooks'
 
-function HeroSectionComponent() {
-  const { clinic } = useCurrentClinic()
+interface HeroProps {
+  title: string
+  subtitle: string
+  ctaText: string
+  ctaLink: string
+  style: 'gradient' | 'minimal'
+}
+
+function HeroSectionComponent({ title, subtitle, ctaText, ctaLink, style: heroStyle }: HeroProps) {
+  const isGradient = heroStyle === 'gradient'
 
   return (
     <section style={{
-      padding: '6rem 1.5rem', textAlign: 'center', color: 'white',
-      background: `linear-gradient(135deg, var(--mavi-primary), var(--mavi-accent))`,
+      padding: '6rem 1.5rem',
+      textAlign: 'center',
+      color: isGradient ? 'white' : 'var(--cp-color-text)',
+      background: isGradient ? 'var(--mavi-gradient)' : 'var(--cp-color-surface)',
     }}>
-      <Stack align="center" gap={3}>
-        <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontWeight: 800 }}>
-          {clinic?.name ?? 'Klinik'}
+      <div className="mavi-container">
+        <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontWeight: 800, lineHeight: 1.1, marginBottom: '1rem' }}>
+          {title}
         </h1>
-        <p style={{ fontSize: '1.125rem', opacity: 0.9, maxWidth: 600 }}>
-          Uzman kadromuzla sağlığınız için en iyi hizmeti sunuyoruz.
+        <p style={{ fontSize: '1.125rem', opacity: 0.9, maxWidth: 600, margin: '0 auto 2rem' }}>
+          {subtitle}
         </p>
-        <button style={{
-          padding: '0.75rem 2rem', background: 'white', color: 'var(--mavi-primary)',
-          border: 'none', borderRadius: 'var(--mavi-radius)', fontWeight: 600, cursor: 'pointer',
+        <a href={ctaLink} style={{
+          display: 'inline-flex', padding: '0.75rem 2rem',
+          background: isGradient ? 'white' : 'var(--cp-color-primary)',
+          color: isGradient ? 'var(--cp-color-primary)' : 'white',
+          borderRadius: 'var(--cp-radius-md)', textDecoration: 'none', fontWeight: 600,
         }}>
-          Randevu Al
-        </button>
-      </Stack>
+          {ctaText}
+        </a>
+      </div>
     </section>
   )
 }
 
 export default defineSection(
-  { label: 'Hero', slot: 'public.hero', icon: 'layout', description: 'Gradient hero alanı' },
+  {
+    label: 'Hero',
+    slot: 'public.hero',
+    icon: 'layout',
+    description: 'Ana sayfa hero alani — gradient veya minimal',
+    props: {
+      title: { type: 'text', label: 'Baslik', default: 'Kliniginize Hosgeldiniz' },
+      subtitle: { type: 'text', label: 'Alt baslik', default: 'Uzman kadromuzla sagliginiz icin en iyi hizmeti sunuyoruz.' },
+      ctaText: { type: 'text', label: 'Buton metni', default: 'Randevu Al' },
+      ctaLink: { type: 'text', label: 'Buton linki', default: '/randevu' },
+      style: { type: 'select', label: 'Stil', default: 'gradient', options: ['gradient', 'minimal'] },
+    },
+  },
   HeroSectionComponent,
 )

@@ -1,0 +1,31 @@
+{
+  "slug": "/iletisim",
+  "title": "Iletisim",
+  "description": "Iletisim bilgileri ve form",
+  "status": "published",
+  "seo": {
+    "metaTitle": "Iletisim — Klinik",
+    "metaDescription": "Bizimle iletisime gecin."
+  },
+  "blocks": [
+    {
+      "id": "hero-contact",
+      "component": "theme:HeroSection",
+      "props": {
+        "title": "Iletisim",
+        "subtitle": "Sorulariniz icin bize ulasin.",
+        "ctaText": "Randevu Al",
+        "ctaLink": "/randevu",
+        "style": "minimal"
+      }
+    },
+    {
+      "id": "contact-form",
+      "component": "theme:ContactSection",
+      "props": {
+        "title": "Bize Ulasin",
+        "showMap": true
+      }
+    }
+  ]
+}

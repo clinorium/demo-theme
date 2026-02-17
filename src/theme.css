@@ -1,43 +1,68 @@
+/*
+ * Mavi Klinik Theme — CSS Token Overrides
+ *
+ * Bu dosya platformun --cp-* tokenlarini tema renkleriyle ezer.
+ * Platform, tema yuklendiginde bu CSS'i otomatik inject eder.
+ */
+
 :root {
-  --mavi-primary: #2563eb;
-  --mavi-accent: #06b6d4;
-  --mavi-bg: #ffffff;
-  --mavi-surface: #f8fafc;
-  --mavi-text: #0f172a;
-  --mavi-text-muted: #94a3b8;
-  --mavi-border: #e2e8f0;
-  --mavi-radius: 8px;
+  /* Renkler */
+  --cp-color-primary: #2563eb;
+  --cp-color-primary-hover: #1d4ed8;
+  --cp-color-accent: #06b6d4;
+  --cp-color-bg: #ffffff;
+  --cp-color-surface: #f8fafc;
+  --cp-color-text: #0f172a;
+  --cp-color-text-secondary: #475569;
+  --cp-color-text-muted: #94a3b8;
+  --cp-color-border: #e2e8f0;
+  --cp-color-success: #059669;
+  --cp-color-warning: #d97706;
+  --cp-color-error: #dc2626;
+
+  /* Tema ozgu tokenlar */
+  --mavi-gradient: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);
   --mavi-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
-  --mavi-font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --mavi-shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  --mavi-transition: 200ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  --cp-color-primary: var(--mavi-primary);
-  --cp-color-accent: var(--mavi-accent);
-  --cp-color-bg: var(--mavi-bg);
-  --cp-color-surface: var(--mavi-surface);
-  --cp-color-text: var(--mavi-text);
-  --cp-color-text-muted: var(--mavi-text-muted);
-  --cp-color-border: var(--mavi-border);
-  --cp-radius-md: var(--mavi-radius);
+  /* Platform tokenlarini ezme */
   --cp-shadow-sm: var(--mavi-shadow);
-  --cp-font-family: var(--mavi-font);
+  --cp-shadow-lg: var(--mavi-shadow-lg);
+  --cp-font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --cp-radius-md: 8px;
 }
 
+/* Karanlik mod */
 [data-theme="dark"] {
-  --mavi-bg: #0f172a;
-  --mavi-surface: #1e293b;
-  --mavi-text: #f1f5f9;
-  --mavi-text-muted: #64748b;
-  --mavi-border: #334155;
+  --cp-color-bg: #0f172a;
+  --cp-color-surface: #1e293b;
+  --cp-color-text: #f1f5f9;
+  --cp-color-text-secondary: #cbd5e1;
+  --cp-color-text-muted: #64748b;
+  --cp-color-border: #334155;
 }
 
-body {
-  font-family: var(--mavi-font);
-  color: var(--mavi-text);
-  background: var(--mavi-bg);
-}
-
+/* Tema yardimci siniflari (section'larda kullanilir) */
 .mavi-container {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 1.5rem;
+}
+
+.mavi-section {
+  padding: 5rem 0;
+}
+
+.mavi-card {
+  background: var(--cp-color-bg);
+  border: 1px solid var(--cp-color-border);
+  border-radius: var(--cp-radius-md);
+  box-shadow: var(--mavi-shadow);
+  transition: box-shadow var(--mavi-transition), transform var(--mavi-transition);
+}
+
+.mavi-card:hover {
+  box-shadow: var(--mavi-shadow-lg);
+  transform: translateY(-2px);
 }

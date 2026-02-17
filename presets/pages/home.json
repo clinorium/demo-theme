@@ -1,0 +1,58 @@
+{
+  "slug": "/",
+  "title": "Ana Sayfa",
+  "description": "Klinik ana sayfasi",
+  "status": "published",
+  "seo": {
+    "metaTitle": "Klinik — Sagliginiz Icin",
+    "metaDescription": "Uzman kadromuzla sagliginiz icin en iyi hizmeti sunuyoruz."
+  },
+  "blocks": [
+    {
+      "id": "hero-1",
+      "component": "theme:HeroSection",
+      "props": {
+        "title": "Kliniginize Hosgeldiniz",
+        "subtitle": "Uzman kadromuzla sagliginiz icin en iyi hizmeti sunuyoruz.",
+        "ctaText": "Randevu Al",
+        "ctaLink": "/randevu",
+        "style": "gradient"
+      }
+    },
+    {
+      "id": "features-1",
+      "component": "theme:FeaturesSection",
+      "props": {
+        "title": "Neden Bizi Secmelisiniz?",
+        "columns": 4
+      }
+    },
+    {
+      "id": "about-1",
+      "component": "theme:AboutSection",
+      "props": {
+        "title": "Hakkimizda",
+        "text": "Klinigemiz 2010 yilindan beri Istanbul da hizmet vermektedir. Uzman kadromuz ve modern ekipmanlarimizla sagliginiz icin en iyi hizmeti sunuyoruz.",
+        "imageUrl": "",
+        "imagePosition": "left"
+      }
+    },
+    {
+      "id": "testimonials-1",
+      "component": "theme:TestimonialsSection",
+      "props": {
+        "title": "Hasta Yorumlari"
+      }
+    },
+    {
+      "id": "cta-1",
+      "component": "theme:CTASection",
+      "props": {
+        "title": "Randevunuzu Hemen Alin",
+        "subtitle": "Uzman kadromuz sizi bekliyor.",
+        "buttonText": "Randevu Al",
+        "buttonLink": "/randevu"
+      }
+    }
+  ]
+}

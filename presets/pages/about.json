@@ -1,0 +1,41 @@
+{
+  "slug": "/hakkimizda",
+  "title": "Hakkimizda",
+  "description": "Klinik hakkinda bilgi",
+  "status": "published",
+  "seo": {
+    "metaTitle": "Hakkimizda — Klinik",
+    "metaDescription": "Klinigemiz hakkinda detayli bilgi."
+  },
+  "blocks": [
+    {
+      "id": "hero-about",
+      "component": "theme:HeroSection",
+      "props": {
+        "title": "Hakkimizda",
+        "subtitle": "2010 yilindan beri saglik sektorunde hizmet veriyoruz.",
+        "ctaText": "Iletisime Gecin",
+        "ctaLink": "/iletisim",
+        "style": "minimal"
+      }
+    },
+    {
+      "id": "about-detail",
+      "component": "theme:AboutSection",
+      "props": {
+        "title": "Hikayemiz",
+        "text": "Klinigemiz, hasta memnuniyetini on planda tutarak modern tip anlayisi ile hizmet vermektedir. Alaninda uzman hekim kadromuz, son teknoloji ekipmanlarimiz ve sicak ortamimizla hastalarimizin yuzunu gulduruyoruz.",
+        "imageUrl": "",
+        "imagePosition": "right"
+      }
+    },
+    {
+      "id": "features-about",
+      "component": "theme:FeaturesSection",
+      "props": {
+        "title": "Degerlerimiz",
+        "columns": 4
+      }
+    }
+  ]
+}
