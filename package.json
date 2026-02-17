@@ -1,0 +1,28 @@
+{
+  "name": "@cp-themes/mavi",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "norium": {
+    "type": "theme",
+    "id": "mavi",
+    "sdkVersion": "^1.0.0"
+  },
+  "dependencies": {
+    "@norium/common": "^1.0.0",
+    "@norium/ui": "^1.0.0",
+    "@norium/theme-kit": "^1.0.0"
+  },
+  "devDependencies": {
+    "@norium/cli": "^1.0.0",
+    "typescript": "^5.7.0",
+    "react": "^19.0.0",
+    "@types/react": "^19.0.0"
+  },
+  "scripts": {
+    "dev": "cpctl dev",
+    "build": "cpctl build",
+    "validate": "cpctl validate",
+    "pack": "cpctl pack"
+  }
+}

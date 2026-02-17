@@ -1,0 +1,43 @@
+:root {
+  --mavi-primary: #2563eb;
+  --mavi-accent: #06b6d4;
+  --mavi-bg: #ffffff;
+  --mavi-surface: #f8fafc;
+  --mavi-text: #0f172a;
+  --mavi-text-muted: #94a3b8;
+  --mavi-border: #e2e8f0;
+  --mavi-radius: 8px;
+  --mavi-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --mavi-font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --cp-color-primary: var(--mavi-primary);
+  --cp-color-accent: var(--mavi-accent);
+  --cp-color-bg: var(--mavi-bg);
+  --cp-color-surface: var(--mavi-surface);
+  --cp-color-text: var(--mavi-text);
+  --cp-color-text-muted: var(--mavi-text-muted);
+  --cp-color-border: var(--mavi-border);
+  --cp-radius-md: var(--mavi-radius);
+  --cp-shadow-sm: var(--mavi-shadow);
+  --cp-font-family: var(--mavi-font);
+}
+
+[data-theme="dark"] {
+  --mavi-bg: #0f172a;
+  --mavi-surface: #1e293b;
+  --mavi-text: #f1f5f9;
+  --mavi-text-muted: #64748b;
+  --mavi-border: #334155;
+}
+
+body {
+  font-family: var(--mavi-font);
+  color: var(--mavi-text);
+  background: var(--mavi-bg);
+}
+
+.mavi-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
