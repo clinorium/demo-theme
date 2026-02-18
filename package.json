@@ -9,12 +9,12 @@
     "sdkVersion": "^1.0.0"
   },
   "dependencies": {
-    "@noriumjs/common": "^1.1.1",
-    "@noriumjs/ui": "^1.1.1",
-    "@noriumjs/theme-kit": "^1.1.1"
+    "@noriumjs/common": "^1.2.2",
+    "@noriumjs/ui": "^1.2.2",
+    "@noriumjs/theme-kit": "^1.2.2"
   },
   "devDependencies": {
-    "@noriumjs/cli": "^1.1.1",
+    "@noriumjs/cli": "^1.2.2",
     "typescript": "^5.7.0",
     "react": "^19.0.0",
     "@types/react": "^19.0.0"
