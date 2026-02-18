@@ -20,9 +20,9 @@
     "@types/react": "^19.0.0"
   },
   "scripts": {
-    "dev": "cpctl dev",
-    "build": "cpctl build",
-    "validate": "cpctl validate",
-    "pack": "cpctl pack"
+    "dev": "norium dev",
+    "build": "norium build",
+    "validate": "norium validate",
+    "pack": "norium pack"
   }
 }
