@@ -1,5 +1,5 @@
 import React from 'react'
-import { defineSection } from '@norium/theme-kit'
+import { defineSection } from '@noriumjs/theme-kit'
 
 interface TestimonialsProps {
   title: string

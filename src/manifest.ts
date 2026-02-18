@@ -1,4 +1,4 @@
-import { defineTheme } from '@norium/theme-kit'
+import { defineTheme } from '@noriumjs/theme-kit'
 
 export default defineTheme({
   id: 'mavi',

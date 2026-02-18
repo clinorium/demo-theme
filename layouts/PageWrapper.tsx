@@ -1,5 +1,5 @@
 import React from 'react'
-import { defineLayout } from '@norium/theme-kit'
+import { defineLayout } from '@noriumjs/theme-kit'
 
 function PageWrapperComponent({ children }: { children: React.ReactNode }) {
   return (

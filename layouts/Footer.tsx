@@ -1,6 +1,6 @@
 import React from 'react'
-import { defineLayout } from '@norium/theme-kit'
-import { useCurrentClinic } from '@norium/common/hooks'
+import { defineLayout } from '@noriumjs/theme-kit'
+import { useCurrentClinic } from '@noriumjs/common/hooks'
 
 function FooterComponent({ children }: { children: React.ReactNode }) {
   const { clinic } = useCurrentClinic()
